@@ -277,4 +277,24 @@ $ sudo su - # 切换到root帐号
 ```
 
 ### 5.7 如何安装程序
-  
+Linux有多种安装软件的方法，我们主要介绍最基本的命令行模式：
+
+- `APT` (Advanced Package Tool) : 是最强的包管理系统，而图形化程序如 添加/删除 应用程序 和 `Synaptic` 都是建立在它的基础之上的。 `APT` 能够自动处理软件之间的依赖关系，安装所需要的软件包。
+- `dpkg` (Debian Packager):  是 `Debian` 专门开发的套件管理系统，方便软件的安装、更新及移除。 本身是一个底层的工具，不能处理依赖关系。
+
+
+```bash
+# 安装软件包
+$ sudo apt-get install packagename
+# 删除软件包
+$ sudo apt-get remove packagename
+# 获取新的软件包列表
+$ sudo apt-get update
+# 升级有可用更新的系统
+$ sudo apt-get upgrade
+
+# 安装 .deb 文件
+sudo dpkg -i packagename.deb 
+# 卸载 .deb 文件
+sudo dpkg -r packagename
+```
