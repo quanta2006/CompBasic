@@ -120,3 +120,23 @@ vim /etc/sysctl.conf
 
 最后一行加入：
 vm.swappiness=0
+
+
+
+安装powerline
+```bash
+sudo apt-get install python-pip
+pip install --upgrade pip
+pip install -U pip
+pip install --user git+git://github.com/Lokaltog/powerline
+sudo apt-get install fonts-powerline
+sudo apt-get install vim-nox-py2
+sudo update-alternatives --config vim
+```
+
+```.vimrc
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+set laststatus=2
+```

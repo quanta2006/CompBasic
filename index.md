@@ -42,3 +42,19 @@
 - 如何高效处理数据
 
 **实验：使用CSV文本编辑处理数据表**
+
+
+
+EASYBCD
+
+1. 修改配置
+```
+title Install Ubuntu
+root (hd0,0)
+kernel (hd0,0)/vmlinuz.efi boot=casper iso-scan/filename=/ubuntu-16.04.2-desktop-amd64.iso ro quiet splash locale=zh_CN.UTF-8
+initrd (hd0,0)/initrd.lz
+```
+2.   `ubuntu-16.04.2-desktop-amd64.iso` `casper/initrd.lz` `casper/vmlinuz.efi` `.disk文件夹` 复制到C盘
+
+
+sudo umount -l /isodevice
